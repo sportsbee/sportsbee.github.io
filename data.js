@@ -14,8 +14,8 @@ var dataLeaderboard = (function() {
 
 
 
-    $(document).ready(function () {
-        $('#example').DataTable({
+    $(window).load(function () {
+        $('#Leaderboard').DataTable({
             "processing": true,
             "info": true,
             "stateSave": true,
