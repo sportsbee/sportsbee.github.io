@@ -22,6 +22,7 @@
     </div>
     <script>
         $(document).ready(function(){
+            // CL #436798
             var print_html = " ";
             $.getJSON("wp-info.json",function(data){
                 $.each(data.groups_info,function(key,value){                    
