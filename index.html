@@ -18,39 +18,30 @@
 <body>
     <div class="container mt-5">
       <div class="row">
-        <!-- <div class="col-sm-4 mt-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sportsbee Whatsapp Group 1</h5>
-              <a href="https://chat.whatsapp.com/JDcshckQFgC5o017S0NDnI" class="btn btn-success"><i class="fab fa-whatsapp"></i> Join</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mt-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sportsbee Whatsapp Group 2</h5>
-              <a href="https://chat.whatsapp.com/IwOg3KNnUqAHyLDJ7QRIHf" class="btn btn-success"><i class="fab fa-whatsapp"></i> Join</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mt-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sportsbee Whatsapp Group 3</h5>
-              <a href="https://chat.whatsapp.com/G6oP00H3WZIKzWQVdhTM8e" class="btn btn-success"><i class="fab fa-whatsapp"></i> Join</a>
-            </div>
-          </div>
-        </div> -->
-       <div class="col-sm-4 mt-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sportsbee Whatsapp Group 4</h5>
-              <a href="https://chat.whatsapp.com/GXj184Dwuc2JwugadnFIFv" class="btn btn-success"><i class="fab fa-whatsapp"></i> Join</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            var print_html = " ";
+            $.getJSON("wp-info.json",function(data){
+                $.each(data.groups_info,function(key,value){                    
+                    if(value.display === "true"){
+                        print_html += 
+                        '<div class="col-sm-4 mt-2">\
+                            <div class="card">\
+                                <div class="card-body">\
+                                    <h5 class="card-title">'+value.name+'</h5>\
+                                    <a href="'+value.join_link+'" class="btn btn-success"><i class="fab fa-whatsapp"></i> Join</a>\
+                                </div>\
+                            </div>\
+                        </div>';
+                    }
+      
+                });
+               $('.row').html(print_html);      
+            });  
+      
+        });
+      </script>
 </body>
 </html>
