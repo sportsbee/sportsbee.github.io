@@ -2,17 +2,17 @@
     "groups_info": [{
         "name": "Sportsbee Whatsapp Group 1",
         "join_link" : "https://chat.whatsapp.com/JDcshckQFgC5o017S0NDnI",
-        "display": "false"
+        "display": "true"
     },
     {
         "name": "Sportsbee Whatsapp Group 2",
         "join_link" : "https://chat.whatsapp.com/IwOg3KNnUqAHyLDJ7QRIHf",
-        "display": "true"   
+        "display": "false"   
     },
     {
         "name": "Sportsbee Whatsapp Group 3",
         "join_link" : "https://chat.whatsapp.com/G6oP00H3WZIKzWQVdhTM8e",
-        "display": "true"   
+        "display": "false"   
     },
     {
         "name": "Sportsbee Whatsapp Group 4",
