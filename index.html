@@ -3,7 +3,13 @@
                         <div class="card">\
                             <div class="card-body">\
                                 <h5 class="card-title">'+value.name+'</h5>\
-                                <a href="'+value.join_link+'" class="btn btn-success"><i class="fab fa-whatsapp"></i> Join</a>\
+                                <a href="'+value.join_link+'" class="btn btn-success mt-3"><i class="fab fa-whatsapp"></i> Join</a>\
+                                <p class="card-text mt-3"><small class="text-muted">'+value.members_count+' Members</small></p>\
+                                <footer class="blockquote-footer">\
+                                    <small class="text-muted">\
+                                    <cite title="updated time">Last updated '+value.updated_time+'</cite>\
+                                    </small>\
+                                </footer>\
                             </div>\
                         </div>\
                     </div>';}});$('.row').html(print_html);});});
