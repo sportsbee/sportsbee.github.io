@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <title>Connect us on Whatsapp | Sportsbee</title>
+        <title>Social Media | Sportsbee</title>
     </head>
     <body>
         <div class="container mt-5">
@@ -22,6 +22,24 @@
             $(document).ready(function() {
             var print_html = " ";
                 $.getJSON("https://api.sportsbee.in/socialmedia", function(data) {
+                    $.each(data.social_platforms.facebook_page, function(key, value) {
+                        if (value.display === "true") {
+                            print_html += '<div class="col-sm-4 mt-2">\
+                                            <div class="card">\
+                                                <div class="card-body">\
+                                                    <h5 class="card-title">' + value.name + ' Facebook</h5>\
+                                                    <a href="' + value.join_link + '" class="btn btn-primary mt-3"><i class="fab fa-facebook"></i> Follow</a>\
+                                                    <p class="card-text mt-3"><small class="text-muted"> - Members</small></p>\
+                                                    <footer class="blockquote-footer">\
+                                                        <small class="text-muted">\
+                                                        <cite title="updated time">Last updated - </cite>\
+                                                        </small>\
+                                                    </footer>\
+                                                </div>\
+                                            </div>\
+                                        </div>';
+                        }
+                    });
                     $.each(data.social_platforms.clubhouse, function(key, value) {
                         if (value.display === "true") {
                             print_html += '<div class="col-sm-4 mt-2">\
